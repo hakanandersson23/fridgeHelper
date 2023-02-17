@@ -1,11 +1,19 @@
 import React from 'react';
 
 
-function Ingredient({ name, amount, onChange }) {
+function Ingredient({ name, amount, index, onChange }) {
   return (
     <div>
-      <input  placeholder="Ingredient name" value={name} onChange={(event) => onChange(event, "name")}  />
-      <input ut placeholder="Amount" value={amount} onChange={(event) => onChange(event, "amount")} />
+      <input
+        placeholder="Ingredient name"
+        value={name}
+        onChange={(event) => onChange(event.target.value, "name", index)}
+      />
+      <input
+        placeholder="Amount"
+        value={amount}
+        onChange={(event) => onChange(event.target.value, "amount", index)}
+      />
     </div>
   );
 }

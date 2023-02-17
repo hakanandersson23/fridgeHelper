@@ -23,13 +23,10 @@ function Form({ onFormSubmit }) {
   function handleAddIngredient() {
     setIngredients([...ingredients, { name: "", amount: "" }]);
   }
-  function handleIngredientChange(event, index) {
-    const { name, value } = event.target;
+
+  function handleIngredientChange(value, index, field) {
     const newIngredients = [...ingredients];
-    newIngredients[index] = {
-      ...newIngredients[index],
-      [name]: value
-    };
+    newIngredients[index][field] = value;
     setIngredients(newIngredients);
   }
 
