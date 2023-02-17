@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-function Ingredient({ name, amount, onChange }) {
+function Ingredient({ index, name, amount, onChange }) {
   return (
     <div>
-      <input name="name" placeholder="Ingredient name" value={name} onChange={onChange} />
-      <input name="amount" placeholder="Amount" value={amount} onChange={onChange} />
+      <input name={`ingredients[${index}].name`} placeholder="Ingredient name" value={name} onChange={onChange} />
+      <input name={`ingredients[${index}].amount`} placeholder="Amount" value={amount} onChange={onChange} />
     </div>
   );
 }

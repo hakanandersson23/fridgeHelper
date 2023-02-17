@@ -24,13 +24,12 @@ function Form({ onFormSubmit }) {
     setIngredients([...ingredients, { name: "", amount: "" }]);
   }
 
-  function handleIngredientChange(event, index) {
-    const { name, value } = event.target;
+  function handleIngredientChange(event, index, property) {
     const newIngredients = [...ingredients];
-    if (index >= newIngredients.length) {
-      newIngredients.push({ name: "", amount: "" });
-    }
-    newIngredients[index][name] = value;
+    newIngredients[index] = {
+      ...newIngredients[index],
+      [property]: event.target.value
+    };
     setIngredients(newIngredients);
   }
 
