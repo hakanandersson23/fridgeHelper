@@ -34,6 +34,10 @@
   .myClass.locked {
     pointer-events: none;
   }
+  .myClass:hover{
+    background-color: rgba(69, 79, 71, 0.45);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+  }
   
   .myClass textarea {
     width: 100%;

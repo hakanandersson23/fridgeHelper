@@ -1,12 +1,13 @@
 import React from 'react';
 
-function Ingredient (props){
-  const { children } = props;
 
-
-    return(
-        <p>{children}</p>
-    );
-
+function Ingredient({ name, amount, onChange }) {
+  return (
+    <div>
+      <input  placeholder="Ingredient name" value={name} onChange={(event) => onChange(event, "name")}  />
+      <input ut placeholder="Amount" value={amount} onChange={(event) => onChange(event, "amount")} />
+    </div>
+  );
 }
+
 export default Ingredient;

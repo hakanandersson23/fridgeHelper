@@ -11,6 +11,7 @@
     position: relative;
     transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
     background: #519265; 
+    color: #fff;
     /* background: linear-gradient(to right, #512da8, #673ab7); */
   }
   
@@ -50,7 +51,7 @@
     font-weight: 400;
     line-height: normal;
     background-color: transparent;
-    color: #282828;
+    color: #fff;
     outline: none;
     box-shadow: 0px 4px 20px 0px transparent;
     transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
@@ -59,16 +60,16 @@
   }
   
   .field input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
   }
   .field input::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
   }
   .field input:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
   }
   .field input:-moz-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
   }
   
   .field input + label {
@@ -97,7 +98,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #e0e0e0;
+    color: #fdfdfd;
     opacity: 1;
     pointer-events: none;
   }
