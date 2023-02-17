@@ -7,7 +7,8 @@ function Card(props) {
   const label = formData.get('label');
   const text = formData.get('text');
   const image = formData.get('image');
-  
+  const ingredients = JSON.parse(formData.get("ingredients"));
+  console.log(ingredients);
   return (
     <div className='card'>
       <div className='imageWrapper'>
@@ -18,6 +19,16 @@ function Card(props) {
       </div>
       <div>
         <p className='text'>{text}</p>
+      </div>
+      <div className='ingredientList'>
+        <h3>Ingredients:</h3>
+        <ul>
+          {ingredients.map((ingredients, index) => (
+            <li key={index}>
+              {ingredients.name} - {ingredients.amount}
+            </li>
+          ))}
+        </ul>
       </div>
       <div className='buttonWrapper'>
         <Button className="expandButton">Expand</Button>

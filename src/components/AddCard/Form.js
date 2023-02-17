@@ -27,6 +27,9 @@ function Form({ onFormSubmit }) {
   function handleIngredientChange(event, index) {
     const { name, value } = event.target;
     const newIngredients = [...ingredients];
+    if (index >= newIngredients.length) {
+      newIngredients.push({ name: "", amount: "" });
+    }
     newIngredients[index][name] = value;
     setIngredients(newIngredients);
   }
@@ -45,7 +48,7 @@ function Form({ onFormSubmit }) {
     setImage(null);
     setIngredients([]);
   };
-  //making some changes
+
 
   return (
     <form onSubmit={handleFormSubmit}>
